@@ -1,0 +1,32 @@
+//colors
+$primaryRed: #A04715;
+$secondaryRed: #F26744;
+$primaryPink: #C5B4B5;
+$secondaryPink: #f0ebec;
+$secondary: #292A36;
+$background: #F7F6F3;
+$primaryGray: #DDDDDD;
+$secondaryGray: #CCCCCC;
+
+//breakpoints
+$break-xs: 0px;
+$break-sm: 498px;
+$break-md: 768px;
+$break-lg: 1080px;
+$break-xl: 1800px;
+
+//animations
+$slideDown: translateY(75vh);
+
+//mixins
+@mixin grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+%levitate {
+  box-shadow: 
+  0px 1px 3px 0px rgba(0, 0, 0, 0.2), 
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
+  0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}

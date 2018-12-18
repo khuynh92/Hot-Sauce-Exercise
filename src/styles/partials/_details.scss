@@ -1,0 +1,73 @@
+.Details-grid-container {
+  @include grid;
+  @extend %levitate;
+  border-radius: 5px;
+  max-width: 1080px;
+  margin: 50px auto;
+  justify-content: center;
+  align-items: flex-start;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: 
+  "title description"
+  "img   description";
+
+  @media screen and (max-width: $break-md) {
+    grid-template-areas: 
+    "title       title"
+    "img         img"
+    "description description";
+  }
+}
+
+.Details-grid-title {
+  @extend %levitate;
+  height: 100%;
+  grid-area: title;
+  background: $primaryGray;
+
+  p {
+    color: #777777;
+    letter-spacing: .05em;
+    margin: 5px 0px 10px 30px;
+    font-size: 3em;
+  }
+}
+
+.Details-back-button {
+  margin: 15px 0px 0px 15px;
+
+  a {
+    text-decoration: none;
+    color: $secondaryRed;
+    transition: 300ms all;
+    &:hover {
+      color: $primaryRed;
+    }
+  }
+}
+
+.Details-grid-img {
+  @extend %levitate;
+  grid-area: img;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: white;
+  align-items: center;
+  img {
+    max-width: 98%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+}
+
+.Details-grid-description {
+  grid-area: description;
+  padding-top: 10px;
+  height: 100%;
+  border-left: 1px solid $primaryGray;
+  word-wrap: break-word;
+  line-height: 1.4em;
+  padding: 0px 10px 0px 10px;
+}

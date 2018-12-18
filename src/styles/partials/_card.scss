@@ -1,0 +1,115 @@
+%top-radius {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+%bottom-radius {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+%close-button {
+  @extend %levitate;
+  position: relative;
+  float: right;
+  z-index: 1;
+  margin-bottom: -25px;
+  margin-right: 5px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  color: $secondary;
+  border-radius: 50%;
+  background: $primaryPink;
+  opacity: .65;
+  transition: 300ms all;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  p {
+    position: relative;
+    top: -14px;
+    text-align: center;
+    margin-bottom: -35px;
+  }
+}
+
+.Card-grid-item {
+  @extend %levitate;
+  border-radius: 5px;
+}
+
+.Card-img-container {
+  @extend %top-radius;
+  background: white;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Card-img {
+  @extend %top-radius;
+  max-width: 200px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Card-details {
+  @extend %bottom-radius;
+  background: $secondaryPink;
+  height: 125px;
+
+  h4 {
+    color: $secondary;
+    margin: 0px 0px 0px 10px;
+    padding-top: 10px;
+    font-size: 1.5em;
+  }
+  p {
+    color: $secondary;
+    margin: 2px 0px 0px 13px;
+  }
+}
+
+.Card-more {
+  position: relative;
+  margin: -20px 8px 0px 0px;
+  float: right;
+  text-decoration: none;
+  color: $secondary;
+  transition: 150ms all;
+  z-index: 1;
+
+  &:hover {
+    color: $secondaryRed;
+  }
+}
+
+
+.Card-showX {
+  @extend %close-button;
+  display: block;
+}
+
+.Card-hideX {
+  @extend %close-button;
+  display: none;
+}
+
+.Card-showEdit {
+  @extend %close-button;
+  display: block;
+  float: left;
+  margin-left: 10px;
+  width: 40px;
+  border-radius: 25px;
+}
+
+.Card-hideEdit {
+  @extend %close-button;
+  display: none;
+}
