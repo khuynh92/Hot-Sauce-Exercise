@@ -7,9 +7,9 @@ module.exports = {
     historyApiFallback: true,
   },
   output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
-    publicPath: '/',        
+    filename: '[name].[hash].js',
+    path: `${__dirname}/dist`,
+    publicPath: `/`,
   },
   module: {
     rules: [
