@@ -16,6 +16,7 @@ Run the command `npm test` in the root directory to view tests.
 - On card hover, delete button will appear on the top right screen
 - Ability to create hot sauces by clicking the '+' button at the end of the list
 - Each detailed hot sauce page has a URL route
+- Grids page has a sort feature that can be sorted by date added or name
 
 ## Work Flow
 1. Began structure of Grid page, using grid wireframe as a reference.
