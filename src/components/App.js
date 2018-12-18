@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import store from '../lib/store.js';
@@ -18,7 +18,7 @@ export default class App extends Component {
             <Route exact path='/' component={Grid} />
             <Routes />
           </Fragment>
-        </BrowserRouter>
+        </ BrowserRouter>
       </Provider>
     );
   }

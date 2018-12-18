@@ -1,6 +1,9 @@
 # Hot Sauce Exercise
 This website displays a list of hot sauces from a given data source. Each list item can be expanded to view additional details
 
+## Live Site
+This exercise is deployed to https://khuynh92.github.io/Hot-Sauce-Exercise
+
 ## To Install
 Run the command `npm i` in the root directory to install all dependencies. *note: you must have node to run this project locally*
 

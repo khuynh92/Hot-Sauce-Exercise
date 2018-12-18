@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --port 8080 --mode development",
+    "test": "jest",
     "dev": "webpack --mode development",
     "build": "webpack --mode production --progress",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "test": "jest"
+    "predeploy": "rm -rf dist && npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "jest": {
     "testURL": "http://localhost/"
   },
+  "homepage": "hhttps://khuynh92.github.io/Hot-Sauce-Exercise",
   "keywords": [],
   "author": "",
   "license": "ISC",
