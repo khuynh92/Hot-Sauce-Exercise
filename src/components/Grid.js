@@ -9,15 +9,7 @@ import AddSauce from './AddSauce.js';
 class Grid extends Component {
 
   sortSauces = (e) => {
-    let {hotSauces, reorderSauces} = this.props;
-    let hotSaucesCopy = [...hotSauces];
-    switch(e.target.value){
-      case 'az': return reorderSauces(hotSaucesCopy.sort((a,b) => a.title < b.title ? -1 : 1));
-      case 'za': return reorderSauces(hotSaucesCopy.sort((a,b) => a.title > b.title ? -1 : 1));
-      case 'newest': return reorderSauces(hotSaucesCopy.sort((a,b) => b.id - a.id));
-      case 'oldest': return reorderSauces(hotSaucesCopy.sort((a,b) => a.id - b.id));
-      default: return reorderSauces(hotSaucesCopy.sort((a,b) => a.id - b.id));
-    }
+    this.props.reorderSauces(e.target.value);
   }
 
   render() {

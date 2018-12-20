@@ -52,7 +52,7 @@ export class Card extends Component {
             <p>x</p>
           </div>
 
-          <Link to={`/hot_sauce/${title}`}>
+          <Link to={`/hot_sauce/${title}/${this.props.hotSauce.id}`}>
             <div className='Card-img-container'>
               <img className='Card-img' src={this.props.hotSauce.imageURL} alt={`picture of ${this.props.hotSauce.title} hot sauce`} />
             </div>
@@ -63,7 +63,7 @@ export class Card extends Component {
             <p>{this.props.hotSauce.subtitle}</p>
           </div>
           
-          <Link to={`/hot_sauce/${title}`} className='Card-more'>more...</Link>
+          <Link to={`/hot_sauce/${title}/${this.props.hotSauce.id}`} className='Card-more'>more...</Link>
         </div>
 
         {

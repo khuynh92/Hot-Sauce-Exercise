@@ -20,7 +20,7 @@ class SauceForm extends Component {
   submit = (e) => {
     e.preventDefault();
     let newSauce = { ...this.state };
-    newSauce.id = this.props.hotSauce ? this.props.hotSauce.id : this.props.hotSauces.length;
+    newSauce.id = this.props.hotSauce ? this.props.hotSauce.id : this.props.hotSauces.reduce((acc, cur) => cur.id > acc ? cur.id : acc, 0) + 1;
     this.props.addSauce(newSauce);
     this.setState({
       title: '',
