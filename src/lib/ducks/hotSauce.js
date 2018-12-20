@@ -20,9 +20,9 @@ export const updateSauce = (sauce) => ({
   payload: sauce,
 });
 
-export const reorderSauces = (list) => ({
+export const reorderSauces = (sortBy) => ({
   type: REORDER_SAUCES,
-  payload: list,
+  payload: sortBy,
 });
 
 export const hotSauceState = (state = initialState, action) => {
@@ -32,7 +32,15 @@ export const hotSauceState = (state = initialState, action) => {
     case ADD_SAUCE: return [...state, payload];
     case REMOVE_SAUCE: return state.filter(hotSauce => hotSauce.id !== payload);
     case UPDATE_SAUCE: return state.map(hotSauce => hotSauce.id === payload.id ? payload: hotSauce);
-    case REORDER_SAUCES: return payload;
+    case REORDER_SAUCES:
+      let hotSaucesCopy = [...state];
+      switch(payload){
+        case 'az': return hotSaucesCopy.sort((a,b) => a.title < b.title ? -1 : 1);
+        case 'za': return hotSaucesCopy.sort((a,b) => a.title > b.title ? -1 : 1);
+        case 'newest': return hotSaucesCopy.sort((a,b) => b.id - a.id);
+        case 'oldest': return hotSaucesCopy.sort((a,b) => a.id - b.id);
+        default: return hotSaucesCopy.sort((a,b) => a.id - b.id);
+      };
     default: return state;
   }
 };

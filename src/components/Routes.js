@@ -13,7 +13,7 @@ class Routes extends Component {
         return (
           <Route
             key={hotSauce.id}
-            path={`/hot_sauce/${title}`}
+            path={`/hot_sauce/${title}/${hotSauce.id}`}
             component={() => <Details hotSauce={hotSauce} />}
           />);
       })
